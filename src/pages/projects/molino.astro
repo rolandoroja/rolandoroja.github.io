@@ -1,0 +1,183 @@
+---
+import Navigation from "../../components/Navigation.astro";
+import Footer from "../../components/Footer.astro";
+
+const project = {
+  title: "Confiteria del Molino - Elevator Modernization (2022)",
+  subtitle: "Heritage building - Elevator modernization & structural redesign",
+
+  // Expanded overview / intro
+  overview: `
+I had the opportunity to participate in the elevator modernization project of Confiteria del Molino, one of the most historically significant and iconic buildings in the city of Buenos Aires.
+
+During the modernization process, a major technical challenge emerged: the existing masonry walls were not structurally capable of supporting the loads introduced by the new elevator systems. As a result, it became necessary to design and implement a fully self-supporting steel structure to house the three elevators, independent from the original building structure.
+
+An additional challenge involved the design of the elevator cabins. The interiors needed to respect the historical and architectural identity of the building, preserving its original aesthetic while integrating modern technical specifications, safety requirements, and contemporary elevator standards. This required a careful balance between heritage preservation and modern engineering solutions.
+  `.trim(),
+
+  hero: {
+    src: "/assets/images/projects/molino/hero.jpg",
+    fallbackSrc: "/assets/images/projects/molino1.jpg",
+    alt: "Confiteria del Molino - elevator modernization and structural design",
+  },
+
+  // What you did (expanded)
+  highlights: [
+    "3D modeling of complete assemblies and individual components for the self-supporting steel structure and elevator systems",
+    "Preparation of fabrication and assembly drawings for mechanical and structural components",
+    "Participation in design proposal documents focused on preserving the historical identity of the building",
+    "Development of detailed installation and assembly instructions for on-site execution",
+    "Monitoring and coordination of materials and fabrication processes for each major assembly",
+    "Material lists and quantity calculations with a focus on optimization and efficiency",
+    "Preparation of technical documentation to support installation, coordination, and future maintenance",
+  ],
+
+  // Deliverables
+  deliverables: [
+    "Complete 3D model of self-supporting structures and elevator components",
+    "Fabrication and assembly drawings for steel structures and mechanical elements",
+    "Design proposal documentation aligned with heritage preservation requirements",
+    "Installation manuals and assembly instructions",
+    "Material take-offs and optimization lists",
+    "Technical documentation package for coordination and execution",
+  ],
+
+  tools: [
+    "Autodesk Inventor",
+    "AutoCAD",
+    "Technical documentation",
+    "Heritage-oriented design criteria",
+  ],
+
+  // Impact
+  impact: [
+    "Enabled elevator modernization without transferring structural loads to heritage masonry walls.",
+    "Successfully integrated modern elevator technology within a historically protected building.",
+    "Preserved the architectural identity of Confitería del Molino while meeting current technical standards.",
+    "Improved installation clarity and reduced on-site uncertainties through detailed documentation.",
+  ],
+
+  // Gallery
+  // Save images in: public/assets/images/projects/molino/
+  gallery: [
+    { src: "/assets/images/projects/molino/01.jpg", alt: "Confitería del Molino – structural design overview" },
+    { src: "/assets/images/projects/molino/02.jpg", alt: "Confitería del Molino – elevator structure assemblies" },
+    { src: "/assets/images/projects/molino/03.jpg", alt: "Confitería del Molino – cabin design details" },
+    { src: "/assets/images/projects/molino/04.jpg", alt: "Confitería del Molino – fabrication drawings" },
+    { src: "/assets/images/projects/molino/05.jpg", alt: "Confitería del Molino – installation details" },
+    { src: "/assets/images/projects/molino/06.jpg", alt: "Confitería del Molino – heritage integration details" },
+  ],
+};
+---
+
+<Navigation />
+
+<main class="max-w-5xl mx-auto py-16 px-4">
+  <header class="mb-10">
+    <h1 class="text-4xl font-bold mb-2 text-neutral-900 dark:text-neutral-100">
+      {project.title}
+    </h1>
+    <p class="text-lg text-neutral-500 dark:text-neutral-400">
+      {project.subtitle}
+    </p>
+  </header>
+
+  <!-- HERO IMAGE -->
+  <img
+    src={project.hero.src}
+    onerror={`this.onerror=null;this.src='${project.hero.fallbackSrc}';`}
+    alt={project.hero.alt}
+    class="w-full rounded-3xl mb-10 ring-1 ring-white/10 shadow-2xl"
+    loading="lazy"
+  />
+
+  <!-- OVERVIEW -->
+  <section class="mb-10">
+    <h2 class="text-2xl font-semibold mb-4 text-neutral-900 dark:text-neutral-100">
+      Overview
+    </h2>
+    <p class="text-neutral-700 dark:text-neutral-300 leading-7 whitespace-pre-line">
+      {project.overview}
+    </p>
+  </section>
+
+  <!-- WHAT I DID -->
+  <section class="mb-10">
+    <h2 class="text-2xl font-semibold mb-4 text-neutral-900 dark:text-neutral-100">
+      What I did
+    </h2>
+    <ul class="list-disc pl-6 text-neutral-700 dark:text-neutral-300 space-y-2">
+      {project.highlights.map((item) => <li>{item}</li>)}
+    </ul>
+  </section>
+
+  <!-- DELIVERABLES -->
+  <section class="mb-10">
+    <h2 class="text-2xl font-semibold mb-4 text-neutral-900 dark:text-neutral-100">
+      Deliverables
+    </h2>
+    <ul class="list-disc pl-6 text-neutral-700 dark:text-neutral-300 space-y-2">
+      {project.deliverables.map((item) => <li>{item}</li>)}
+    </ul>
+  </section>
+
+  <!-- TOOLS -->
+  <section class="mb-10">
+    <h2 class="text-2xl font-semibold mb-4 text-neutral-900 dark:text-neutral-100">
+      Tools & Technologies
+    </h2>
+    <div class="flex flex-wrap gap-2">
+      {project.tools.map((t) => (
+        <span class="px-3 py-1 rounded-full text-sm bg-white/5 dark:bg-black/20 ring-1 ring-white/10 text-neutral-800 dark:text-neutral-100">
+          {t}
+        </span>
+      ))}
+    </div>
+  </section>
+
+  <!-- IMPACT -->
+  <section class="mb-10">
+    <h2 class="text-2xl font-semibold mb-4 text-neutral-900 dark:text-neutral-100">
+      Impact
+    </h2>
+    <ul class="list-disc pl-6 text-neutral-700 dark:text-neutral-300 space-y-2">
+      {project.impact.map((item) => <li>{item}</li>)}
+    </ul>
+  </section>
+
+  <!-- GALLERY -->
+  <section class="mb-12">
+    <h2 class="text-2xl font-semibold mb-4 text-neutral-900 dark:text-neutral-100">
+      Gallery
+    </h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+      {project.gallery.map((img) => (
+        <img
+          src={img.src}
+          alt={img.alt}
+          class="w-full h-[260px] object-cover rounded-2xl ring-1 ring-white/10"
+          loading="lazy"
+        />
+      ))}
+    </div>
+  </section>
+
+  <!-- NAV -->
+  <div class="flex gap-3">
+    <a
+      href="/projects/"
+      class="inline-block px-5 py-2 rounded-xl border border-white/10 text-neutral-800 dark:text-neutral-100 hover:bg-black/5 dark:hover:bg-white/5 transition"
+    >
+      ← Back to Projects
+    </a>
+
+    <a
+      href="mailto:rojarolando@gmail.com?subject=Portfolio%20-%20Confitería%20del%20Molino"
+      class="inline-block px-5 py-2 rounded-xl border border-white/10 text-neutral-800 dark:text-neutral-100 hover:bg-black/5 dark:hover:bg-white/5 transition"
+    >
+      Contact me
+    </a>
+  </div>
+</main>
+
+<Footer />

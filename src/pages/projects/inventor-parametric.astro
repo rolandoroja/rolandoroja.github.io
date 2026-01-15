@@ -1,0 +1,203 @@
+---
+import Navigation from "../../components/Navigation.astro";
+import Footer from "../../components/Footer.astro";
+
+const project = {
+  title: "Parametric 3D Modeling & Design Automation",
+  subtitle: "Autodesk Inventor + iLogic – Product standardization and optimization",
+
+  // Expanded overview
+  overview: `
+This project focused on the optimization and standardization of mechanical products through parametric modeling and design automation using Autodesk Inventor and iLogic.
+
+By linking Autodesk Inventor models to external Excel files, design parameters could be modified quickly and consistently. Changing a small set of values in a spreadsheet automatically generated updated 3D models for assemblies and individual parts, complete fabrication drawings, and updated bills of materials ready for procurement.
+
+The main objective was to progressively parametrize both existing and new products, reducing engineering time, minimizing errors, and ensuring consistency across product families.
+  `.trim(),
+
+  hero: {
+    src: "/assets/images/projects/inventor/hero.jpg",
+    fallbackSrc: "/assets/images/projects/inventor1.jpg",
+    alt: "Parametric modeling and automation using Autodesk Inventor and iLogic",
+  },
+
+  // What you did
+  highlights: [
+    "Development of parametric product architectures using Autodesk Inventor",
+    "Implementation of iLogic rules to automate geometry, configurations, and design variations",
+    "Integration of Excel spreadsheets as external parameter sources",
+    "Automatic generation of 3D models for assemblies and individual parts",
+    "Automatic generation of fabrication drawings and documentation",
+    "Automatic creation and update of bills of materials for purchasing",
+    "Standardization of product families to reduce variability and design errors",
+  ],
+
+  // Deliverables
+  deliverables: [
+    "Parametric 3D models for assemblies and components",
+    "Fully automated drawing generation workflows",
+    "Excel-driven configuration files for product variants",
+    "Automated bills of materials linked to design changes",
+    "Standardized design templates for future product development",
+  ],
+
+  tools: [
+    "Autodesk Inventor",
+    "iLogic",
+    "Excel-driven parametric control",
+    "Parametric modeling",
+    "Design automation",
+  ],
+
+  // Impact
+  impact: [
+    "Significantly reduced engineering time by automating repetitive design tasks.",
+    "Improved consistency and reliability across multiple product configurations.",
+    "Minimized errors in drawings and bills of materials through rule-based automation.",
+    "Enabled faster response to design changes and custom product requests.",
+  ],
+
+  // Product scope
+  products: [
+    "Elevator cabins",
+    "Elevator frames and structural components",
+    "Access gates and doors",
+    "Vehicle lifts",
+    "Hydraulic ramps",
+    "Custom mechanical products",
+  ],
+
+  // Gallery
+  // Save images in: public/assets/images/projects/inventor/
+  gallery: [
+    { src: "/assets/images/projects/inventor/01.jpg", alt: "Parametric elevator cabin models" },
+    { src: "/assets/images/projects/inventor/02.jpg", alt: "iLogic rules and parameter control" },
+    { src: "/assets/images/projects/inventor/03.jpg", alt: "Automated assembly configurations" },
+    { src: "/assets/images/projects/inventor/04.jpg", alt: "Automatic drawing generation" },
+    { src: "/assets/images/projects/inventor/05.jpg", alt: "Bill of materials linked to parameters" },
+    { src: "/assets/images/projects/inventor/06.jpg", alt: "Parametric product family overview" },
+  ],
+};
+---
+
+<Navigation />
+
+<main class="max-w-5xl mx-auto py-16 px-4">
+  <header class="mb-10">
+    <h1 class="text-4xl font-bold mb-2 text-neutral-900 dark:text-neutral-100">
+      {project.title}
+    </h1>
+    <p class="text-lg text-neutral-500 dark:text-neutral-400">
+      {project.subtitle}
+    </p>
+  </header>
+
+  <!-- HERO IMAGE -->
+  <img
+    src={project.hero.src}
+    onerror={`this.onerror=null;this.src='${project.hero.fallbackSrc}';`}
+    alt={project.hero.alt}
+    class="w-full rounded-3xl mb-10 ring-1 ring-white/10 shadow-2xl"
+    loading="lazy"
+  />
+
+  <!-- OVERVIEW -->
+  <section class="mb-10">
+    <h2 class="text-2xl font-semibold mb-4 text-neutral-900 dark:text-neutral-100">
+      Overview
+    </h2>
+    <p class="text-neutral-700 dark:text-neutral-300 leading-7 whitespace-pre-line">
+      {project.overview}
+    </p>
+  </section>
+
+  <!-- WHAT I DID -->
+  <section class="mb-10">
+    <h2 class="text-2xl font-semibold mb-4 text-neutral-900 dark:text-neutral-100">
+      What I did
+    </h2>
+    <ul class="list-disc pl-6 text-neutral-700 dark:text-neutral-300 space-y-2">
+      {project.highlights.map((item) => <li>{item}</li>)}
+    </ul>
+  </section>
+
+  <!-- DELIVERABLES -->
+  <section class="mb-10">
+    <h2 class="text-2xl font-semibold mb-4 text-neutral-900 dark:text-neutral-100">
+      Deliverables
+    </h2>
+    <ul class="list-disc pl-6 text-neutral-700 dark:text-neutral-300 space-y-2">
+      {project.deliverables.map((item) => <li>{item}</li>)}
+    </ul>
+  </section>
+
+  <!-- PRODUCT SCOPE -->
+  <section class="mb-10">
+    <h2 class="text-2xl font-semibold mb-4 text-neutral-900 dark:text-neutral-100">
+      Product Scope
+    </h2>
+    <ul class="list-disc pl-6 text-neutral-700 dark:text-neutral-300 space-y-2">
+      {project.products.map((item) => <li>{item}</li>)}
+    </ul>
+  </section>
+
+  <!-- TOOLS -->
+  <section class="mb-10">
+    <h2 class="text-2xl font-semibold mb-4 text-neutral-900 dark:text-neutral-100">
+      Tools & Technologies
+    </h2>
+    <div class="flex flex-wrap gap-2">
+      {project.tools.map((t) => (
+        <span class="px-3 py-1 rounded-full text-sm bg-white/5 dark:bg-black/20 ring-1 ring-white/10 text-neutral-800 dark:text-neutral-100">
+          {t}
+        </span>
+      ))}
+    </div>
+  </section>
+
+  <!-- IMPACT -->
+  <section class="mb-10">
+    <h2 class="text-2xl font-semibold mb-4 text-neutral-900 dark:text-neutral-100">
+      Impact
+    </h2>
+    <ul class="list-disc pl-6 text-neutral-700 dark:text-neutral-300 space-y-2">
+      {project.impact.map((item) => <li>{item}</li>)}
+    </ul>
+  </section>
+
+  <!-- GALLERY -->
+  <section class="mb-12">
+    <h2 class="text-2xl font-semibold mb-4 text-neutral-900 dark:text-neutral-100">
+      Gallery
+    </h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+      {project.gallery.map((img) => (
+        <img
+          src={img.src}
+          alt={img.alt}
+          class="w-full h-[260px] object-cover rounded-2xl ring-1 ring-white/10"
+          loading="lazy"
+        />
+      ))}
+    </div>
+  </section>
+
+  <!-- NAV -->
+  <div class="flex gap-3">
+    <a
+      href="/projects/"
+      class="inline-block px-5 py-2 rounded-xl border border-white/10 text-neutral-800 dark:text-neutral-100 hover:bg-black/5 dark:hover:bg-white/5 transition"
+    >
+      ← Back to Projects
+    </a>
+
+    <a
+      href="mailto:rojarolando@gmail.com?subject=Portfolio%20-%20Parametric%20Inventor%20Models"
+      class="inline-block px-5 py-2 rounded-xl border border-white/10 text-neutral-800 dark:text-neutral-100 hover:bg-black/5 dark:hover:bg-white/5 transition"
+    >
+      Contact me
+    </a>
+  </div>
+</main>
+
+<Footer />

@@ -1,0 +1,190 @@
+---
+import Navigation from "../../components/Navigation.astro";
+import Footer from "../../components/Footer.astro";
+
+const project = {
+  title: "Mirador del Obelisco (2024)",
+  subtitle: "Public elevator – Mechanical design & installation documentation",
+
+  // Expanded overview / intro (multiline)
+  overview: `
+The Obelisco de Buenos Aires is one of the most iconic landmarks of the city, inaugurated in 1936 and located at its historic center.
+
+In 2022, the company where I worked was awarded the public tender to design and build a panoramic elevator inside the Obelisk, allowing public access to its viewpoint for the first time. Due to the monument being completely hollow, the project scope extended beyond the elevator itself: a fully self-supporting steel structure had to be designed and installed to house the elevator system, along with an emergency staircase wrapping around it.
+
+This internal structure needed to be structurally independent, precisely adapted to the existing geometry, and assembled inside a highly constrained space. I had the opportunity to actively participate in the project, contributing across design, documentation, coordination, and visualization tasks throughout multiple stages of development.
+  `.trim(),
+
+  hero: {
+    src: "/assets/images/projects/obelisco/hero.jpg",
+    fallbackSrc: "/assets/images/projects/obelisco1.jpg",
+    alt: "Mirador del Obelisco – mechanical design and documentation",
+  },
+
+  // What I did (expanded)
+  highlights: [
+    "3D modeling of the complete project, including assemblies and individual components of the self-supporting steel structure and elevator system",
+    "Preparation of all fabrication and assembly drawings for workshop production and on-site installation",
+    "Generation of CAM-ready DWG files for laser cutting of steel plates and profiles",
+    "Participation in material selection proposals, space optimization studies, installation sequencing, and material access planning on site",
+    "Calculation and verification of chemical anchors using Hilti software to ensure structural compliance",
+    "Creation of technical renders using Autodesk Inventor for project presentations and progress reviews",
+    "Development of video renders using Twinmotion to visually communicate project advances",
+    "Material quantity calculations and optimization for the entire project (steel plates, profiles, tubes, metal meshes, fasteners, and accessories)",
+    "Preparation of detailed installation and assembly instructions",
+    "Follow-up and coordination of fabrication processes and material tracking for all major assemblies",
+  ],
+
+  // Deliverables (expanded)
+  deliverables: [
+    "Complete 3D assembly model of the internal steel structure and elevator system",
+    "Fabrication and assembly drawings for all mechanical and structural components",
+    "Laser-cutting CAM files for steel plates and profiles",
+    "Installation manuals and step-by-step assembly instructions",
+    "Anchor calculation reports and verification documentation",
+    "Material take-offs and optimization reports",
+    "Rendered images and animated videos for technical presentations and public communication",
+  ],
+
+  tools: ["Autodesk Inventor", "AutoCAD", "Technical documentation", "Twinmotion", "Hilti (anchor verification)"],
+
+  // Impact (expanded)
+  impact: [
+    "Enabled the construction of a self-supporting internal structure within a historic monument without altering its external appearance.",
+    "Improved installation efficiency and reduced on-site uncertainty through detailed documentation and assembly planning.",
+    "Supported multidisciplinary teams with clear visual and technical material throughout all project phases.",
+    "Contributed to a landmark public infrastructure project that expanded access to one of Buenos Aires’ most iconic monuments.",
+  ],
+
+  // Gallery
+  // Save images in: public/assets/images/projects/obelisco/
+  gallery: [
+    { src: "/assets/images/projects/obelisco/01.jpg", alt: "Obelisco – drawing package overview" },
+    { src: "/assets/images/projects/obelisco/02.jpg", alt: "Obelisco – assembly and interfaces" },
+    { src: "/assets/images/projects/obelisco/03.jpg", alt: "Obelisco – installation details" },
+    { src: "/assets/images/projects/obelisco/04.jpg", alt: "Obelisco – installation details" },
+    { src: "/assets/images/projects/obelisco/05.jpg", alt: "Obelisco – installation details" },
+    { src: "/assets/images/projects/obelisco/06.jpg", alt: "Obelisco – installation details" },
+    { src: "/assets/images/projects/obelisco/07.jpg", alt: "Obelisco – installation details" },
+    { src: "/assets/images/projects/obelisco/08.jpg", alt: "Obelisco – installation details" },
+    { src: "/assets/images/projects/obelisco/09.jpg", alt: "Obelisco – installation details" },
+    { src: "/assets/images/projects/obelisco/10.jpg", alt: "Obelisco – installation details" },
+    { src: "/assets/images/projects/obelisco/11.jpg", alt: "Obelisco – installation details" },
+    { src: "/assets/images/projects/obelisco/12.jpg", alt: "Obelisco – installation details" },
+    { src: "/assets/images/projects/obelisco/13.jpg", alt: "Obelisco – installation details" },
+  ],
+};
+---
+
+<Navigation />
+
+<main class="max-w-5xl mx-auto py-16 px-4">
+  <header class="mb-10">
+    <h1 class="text-4xl font-bold mb-2 text-neutral-900 dark:text-neutral-100">
+      {project.title}
+    </h1>
+    <p class="text-lg text-neutral-500 dark:text-neutral-400">
+      {project.subtitle}
+    </p>
+  </header>
+
+  <!-- HERO IMAGE -->
+  <img
+    src={project.hero.src}
+    onerror={`this.onerror=null;this.src='${project.hero.fallbackSrc}';`}
+    alt={project.hero.alt}
+    class="w-full rounded-3xl mb-10 ring-1 ring-white/10 shadow-2xl"
+    loading="lazy"
+  />
+
+  <!-- OVERVIEW -->
+  <section class="mb-10">
+    <h2 class="text-2xl font-semibold mb-4 text-neutral-900 dark:text-neutral-100">
+      Overview
+    </h2>
+    <p class="text-neutral-700 dark:text-neutral-300 leading-7 whitespace-pre-line">
+      {project.overview}
+    </p>
+  </section>
+
+  <!-- WHAT I DID -->
+  <section class="mb-10">
+    <h2 class="text-2xl font-semibold mb-4 text-neutral-900 dark:text-neutral-100">
+      What I did
+    </h2>
+    <ul class="list-disc pl-6 text-neutral-700 dark:text-neutral-300 space-y-2">
+      {project.highlights.map((item) => <li>{item}</li>)}
+    </ul>
+  </section>
+
+  <!-- DELIVERABLES -->
+  <section class="mb-10">
+    <h2 class="text-2xl font-semibold mb-4 text-neutral-900 dark:text-neutral-100">
+      Deliverables
+    </h2>
+    <ul class="list-disc pl-6 text-neutral-700 dark:text-neutral-300 space-y-2">
+      {project.deliverables.map((item) => <li>{item}</li>)}
+    </ul>
+  </section>
+
+  <!-- TOOLS -->
+  <section class="mb-10">
+    <h2 class="text-2xl font-semibold mb-4 text-neutral-900 dark:text-neutral-100">
+      Tools & Technologies
+    </h2>
+    <div class="flex flex-wrap gap-2">
+      {project.tools.map((t) => (
+        <span class="px-3 py-1 rounded-full text-sm bg-white/5 dark:bg-black/20 ring-1 ring-white/10 text-neutral-800 dark:text-neutral-100">
+          {t}
+        </span>
+      ))}
+    </div>
+  </section>
+
+  <!-- IMPACT -->
+  <section class="mb-10">
+    <h2 class="text-2xl font-semibold mb-4 text-neutral-900 dark:text-neutral-100">
+      Impact
+    </h2>
+    <ul class="list-disc pl-6 text-neutral-700 dark:text-neutral-300 space-y-2">
+      {project.impact.map((item) => <li>{item}</li>)}
+    </ul>
+    <p class="text-sm text-neutral-500 dark:text-neutral-400 mt-3"></p>
+  </section>
+
+  <!-- GALLERY -->
+  <section class="mb-12">
+    <h2 class="text-2xl font-semibold mb-4 text-neutral-900 dark:text-neutral-100">
+      Gallery
+    </h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+      {project.gallery.map((img) => (
+        <img
+          src={img.src}
+          alt={img.alt}
+          class="w-full h-[260px] object-cover rounded-2xl ring-1 ring-white/10"
+          loading="lazy"
+        />
+      ))}
+    </div>
+  </section>
+
+  <!-- NAV -->
+  <div class="flex gap-3">
+    <a
+      href="/projects/"
+      class="inline-block px-5 py-2 rounded-xl border border-white/10 text-neutral-800 dark:text-neutral-100 hover:bg-black/5 dark:hover:bg-white/5 transition"
+    >
+      ← Back to Projects
+    </a>
+
+    <a
+      href="mailto:rojarolando@gmail.com?subject=Portfolio%20-%20Mirador%20del%20Obelisco"
+      class="inline-block px-5 py-2 rounded-xl border border-white/10 text-neutral-800 dark:text-neutral-100 hover:bg-black/5 dark:hover:bg-white/5 transition"
+    >
+      Contact me
+    </a>
+  </div>
+</main>
+
+<Footer />

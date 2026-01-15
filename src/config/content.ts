@@ -1,31 +1,30 @@
 export const siteConfig = {
-  name: "Your Portfolio",
-  title: "Someone's Portfolio",
-  description: "A showcase of my work and thoughts",
+  name: "Rolando Roja",
+  title: "Mechanical Engineer | Design & Project Engineering",
+  description: "A showcase of my projects",
   social: {
-    github: "https://github.com/tomcomtang/astro-multiplepage-portfolio",
-    twitter: "https://x.com/astrodotbuild",
-    email: "mailto:364786053@qq.com",
+    Linkedin: "https://www.linkedin.com/in/rolandoroja",
+    email: "rojarolando@gmail.com",
   },
 };
 
 export const homeContent = {
-  title: "Hello, I'm Your Name",
+  title: "Hello, I'm Rolando Roja",
   description:
-    "A passionate frontend developer with a keen eye for design and a love for creating beautiful, functional web experiences.",
+    "Mechanical Engineer focused on mechanical design, project planning and technical documentation.",
   buttons: {
     about: {
-      text: "View About",
+      text: "About Me",
       href: "/about/",
     },
     posts: {
-      text: "Read Posts",
-      href: "/posts/",
+      text: "View Projects",
+      href: "/projects/",
     },
   },
   images: {
-    light: "https://multiplepage-portfolio.edgeone.app/assets/images/tech-background-light.svg",
-    dark: "/assets/images/tech-background-dark.svg",
+    light: "/assets/images/home/home-bg-light.png",
+    dark: "/assets/images/home/home-bg-dark.png",
   },
 };
 
@@ -36,86 +35,89 @@ export const aboutContent = {
   },
   title: "About Me",
   description:
-    "This is where you can introduce yourself or your company. Share your story, mission, and values. Explain what makes you unique and why people should be interested in your work. Keep it concise but engaging.",
+    "I am a responsible and proactive Mechanical Engineer with extensive experience in mechanical design, project planning, and on-site documentation. Committed to continuous learning and applying engineering to improve everyday life. I am analytical, adaptable, with great attention to detail, excellent communication skills and eager to take on new challenges.",
   skills: [
-    "Next.js",
-    "React",
-    "TypeScript",
-    "Tailwind CSS",
-    "Node.js",
-    "Docker",
-    "Git",
-    "AWS",
+    "Advance proficiency Autodesk Inventor",
+    "English Level B2 (IELTS Band 6 - 2025)",
+    "SAP (Material Management & Maintenance)",
+    "Stress analysis simulations - Ansys Workbench",
+    "Large-scale engineering projects",
   ],
   image: {
-    src: "/assets/images/about/coder.jpg",
+    src: "/assets/images/about/coder.png",
     alt: "Profile",
   },
   experience: {
     title: "Experience",
     items: [
       {
-        period: "2022 - Present",
-        position: "Senior Frontend Developer",
-        company: "Tencent Cloud",
+        period: "Dec 2024 - Oct 2025",
+        position: "Project Supervisor",
+        company: "Ascensores Servas S.A.",
         description:
-          "Leading frontend development for EdgeOne platform and templates.",
+          "Responsible for project planning, reporting directly to management.",
       },
       {
-        period: "2020 - 2022",
-        position: "Frontend Developer",
-        company: "Tencent Cloud",
+        period: "Sep 2020 - Dec 2024",
+        position: "Mechanical Designer",
+        company: "Ascensores Servas S.A",
         description:
-          "Developed and maintained multiple web applications and tools.",
+          "Resposible for the mechanical design of projects and new products, applying innovative solutions in lifting systems ans steel structures",
       },
       {
-        period: "2018 - 2020",
-        position: "Junior Developer",
-        company: "Tencent Cloud",
-        description: "Worked on various client projects and internal tools.",
+        period: "Aug 2018 - Feb 2020",
+        position: "TPM Technician",
+        company: "Groupe PSA",
+        description: "Preparation of maintenance instructions",
+      },
+       {
+        period: "Dec 2013 - Feb 2015",
+        position: "Technical Draftsperson",
+        company: "Inntekne Ingeniería S.A",
+        description: "Create 3D models of parts, mechanical components and technical drawings using Autodesk Inventor",
       },
     ],
   },
   connect: {
     title: "Let's Connect",
     description:
-      "Feel free to reach out if you want to collaborate or just say hi! You can find us on social media or drop us an",
+      "If you’d like to get in touch regarding projects, opportunities, or collaborations, feel free to reach me directly by ",
     email: {
       text: "email",
-      href: "mailto:364786053@qq.com",
+      href: "mailto:rojarolando@gmail.com",
     },
   },
 };
 
 export const projectsContent = {
   meta: {
-    title: "Projects - Your Portfolio",
-    description: "Showcase of my best work and projects",
+    title: "Projects | Rolando Roja",
+    description: "Selected mechanical engineering projects and design work.",
   },
-  title: "Our Projects",
+  title: "Projects",
   description:
-    "Here you can showcase your best work. Each project should include a brief description, the technologies used, and any notable achievements. This helps potential clients or employers understand your capabilities.",
+    "A selection of mechanical design and project engineering work. Each project includes context, scope and outcomes.",
   projects: [
     {
-      title: "Project One",
+      title: "Mirador del Obelisco (2024)",
       description:
-        "A brief description of your first project. Explain what it does and what technologies you used.",
-      image: "/assets/images/projects/project1.jpg",
-      href: "#",
+        "Mechanical design and installation documentation for a large-scale public elevator project. Scope included detailed 3D modeling, assembly drawings, and coordination with site constraints to ensure safe installation and compliance.",
+      image: "/assets/images/projects/obelisco1.jpg",
+      href: "/projects/obelisco",
     },
     {
-      title: "Project Two",
+      title: "Confiteria del Molino - Elevator Modernization (2022)",
       description:
-        "Describe your second project here. Highlight the key features and your role in development.",
-      image: "/assets/images/projects/project2.jpg",
-      href: "#",
+        "Modernization of heritage elevators in a historic building. Responsibilities included technical coordination, mechanical redesign, and preparation of detailed documentation while respecting architectural and heritage requirements.",
+      image: "/assets/images/projects/molino1.jpg",
+      href: "/projects/molino",
     },
     {
-      title: "Project Three",
+      title: "Parametric 3D Models in Autodesk Inventor",
       description:
-        "Share details about your third project. What problems did it solve? What was the outcome?",
-      image: "/assets/images/projects/project3.png",
-      href: "#",
+        "Development of parametric 3D models in Autodesk Inventor to automate design variations. Implemented iLogic rules and configurable parameters to generate multiple product variants, reduce design time, and minimize errors in bills of materials.",
+      image: "/assets/images/projects/inventor1.jpg",
+      href: "/projects/inventor-parametric",
     },
   ],
 };

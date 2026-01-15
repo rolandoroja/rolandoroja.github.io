@@ -109,15 +109,25 @@ import { aboutContent } from "../config/content.ts";
               >
                 {aboutContent.description}
               </p>
-              <div class="mt-auto pt-4 flex flex-wrap gap-2">
-                {
-                  aboutContent.skills.map((skill) => (
-                    <span class="px-3 py-1 text-sm bg-neutral-200 dark:bg-neutral-700 text-neutral-700 dark:text-neutral-200 rounded-full">
-                      {skill}
-                    </span>
-                  ))
-                }
-              </div>
+              <div class="mt-8 flex flex-wrap gap-3">
+  {aboutContent.skills.map((skill) => (
+    <span
+      class="inline-flex items-center justify-center
+             px-4 py-2 text-sm font-medium
+             rounded-full
+             bg-white/10 dark:bg-white/10
+             text-neutral-100/90
+             ring-1 ring-white/10
+             backdrop-blur-sm
+             max-w-[320px]
+             truncate"
+      title={skill}
+    >
+      {skill}
+    </span>
+  ))}
+</div>
+
             </div>
             <div class="w-full md:w-1/2 flex justify-end">
               <div class="relative w-[360px] h-[360px]">
